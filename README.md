@@ -36,7 +36,7 @@ The script uses a simple validation pattern that only ensures a given record has
 --------------------------
 ## Part 2: SQL
 
-All three SQL questions and answers are included in questions.sql. The answers to each question are provided below as well:
+All three SQL questions and answers are included in questions.sql. Answers were derived from the provided DB Fiddle dataset using PostgreSQL v18. The answers to each question are provided below as well:
 
 *Question 1: Which Team Liquid player had the strongest overall performance across their recent matches? Briefly describe which stats you used to evaluate overall performance and why.*
 
