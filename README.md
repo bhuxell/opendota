@@ -20,11 +20,11 @@ The following definitions were used to create the output:
 - Recent Matches: The first five matches returned from recentMatches per player.
 
 ### API Usage
-The free tier of the OpenDota API allows for a maximum of 3000 calls per day, and 60 calls per minute. This script uses N + 2 calls end-to-end where N is the number of current players on team (1 for team ID discovery, 1 for player ID discovery, 1 call per player to get recent matches).
+The free tier of the OpenDota API allows for a maximum of 3000 calls per day, and 60 calls per minute. This script uses N + 2 calls end-to-end where N is the number of current players on the team (1 for team ID discovery, 1 for player ID discovery, 1 call per player to get recent matches).
 
 Since this number is low and for an ad-hoc type of extraction would not be close to reaching these rate limits, general API considerations when considering scale (async handling, retry logic, exponential backoff, etc) were omitted for simplicity. Only a timeout was set to prevent hung connections. Additional notes on how the API was used:
 
-- The GET /players/{account_id}/recentMatches endpoint with slicing was chosen over GET /players/{account_id}/matches with a limit because it contained additional data and was better fit for the focus of the extraction.
+- The GET /players/{account_id}/recentMatches endpoint with slicing was chosen over GET /players/{account_id}/matches with a limit because it contained additional data and was a better fit for the focus of the extraction.
 - With the GET /search only applying to players, a call to GET /teams is made and results are iterated through to dynamically retrieve the ID based on matching to a defined team name constant.
 
 ### Output Design
