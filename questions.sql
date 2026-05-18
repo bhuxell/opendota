@@ -85,7 +85,7 @@ losses.
 
 ANSWER: K/D ratio shows the largest gap between wins and losses, typically
 doubling or more in wins (ex. 152962063: 0.67 to 4.29, 201358612: 1.54 to
-4.87). The primary driver is avg_deaths, which drops in wins for every player
+4.88). The primary driver is avg_deaths, which drops in wins for every player
 on the roster (often by 2x or more). avg_kills also tends to be higher in
 wins but is less consistent (60943014 averages more kills in losses), and
 avg_assists varies by role.
